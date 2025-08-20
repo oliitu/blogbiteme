@@ -1,225 +1,151 @@
 {% load static %}
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en" class="no-js">
 <head>
     <meta charset="utf-8" />
-    <title>Django - Blog Vaxi Drez</title>
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <meta name="description" content="" />
+    <title>Django - Blog BiteMe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:url" content="" />
-    <meta property="og:image" content="" />
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/imgs/theme/favicon.svg' %}" />
-    <link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
-
+    <link rel="shortcut icon" href="{% static 'assets/imgs/theme/logonobg.png' %}" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-[#f4c7cc] text-gray-800 font-sans">
 
-<body>
-    <header class="header-area header-style-1 header-height-2">
-        <div class="mobile-promotion">
-            <span>Grand opening, <strong>up to 15%</strong> off all items. Only <strong>3 days</strong> left</span>
-        </div>
-        <div class="header-middle header-middle-ptb-1 d-none d-lg-block">
-            <div class="container">
-                <div class="header-wrap">
-                    <div class="logo logo-width-1">
-                        <a href="index.html"><img src="{%static 'assets/imgs/theme/logo.svg' %}" alt="logo" /></a>
-                    </div>
-                    <div class="header-right">
-                        <div class="search-style-2">
-                        </div>
-                        <div class="header-action-right">
-                            <div class="header-action-2">
-                                <div class="header-action-icon-2">
-                                    <a href="shop-compare.html">
-                                        <img class="svgInject" alt="Nest" src="{% static 'assets/imgs/theme/icons/icon-user.svg' %}" />
-                                    </a>
-                                    <a href="shop-compare.html"><span class="lable ml-0">&nbsp;Login</span></a>
-                                </div>
-                       
-                                <div class="header-action-icon-2">
-                                    <a href="shop-compare.html">
-                                        <img class="svgInject" alt="Nest" src="{% static 'assets/imgs/theme/icons/dashboard.svg' %}" />
-                                    </a>
-                                    <a href="shop-compare.html"><span class="lable ml-0">&nbsp;&nbsp;Dashboard</span></a>
-                                    <div class="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
-                                        <ul>
-                                            <li><a href="page-account.html"><i class="fi fi-rs-document mr-10"></i>Posts</a></li>
-                                            <li><a href="page-account.html"><i class="fi fi-rs-settings-sliders mr-10"></i>Categorias</a></li>
-                                            <li><a href="page-login.html"><i class="fi fi-rs-sign-out mr-10"></i>Sign out</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+    <!-- HEADER -->
+    <header class="bg-amber-900 border-b">
+       
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="/" class="flex items-center space-x-2">
+                <img src="{% static 'assets/imgs/theme/logonobg.png' %}" alt="Logo" class="h-8">
+                <span class="text-lg text-amber-50 font-bold">Blog BiteMe</span>
+            </a>
+            <div class="flex items-center space-x-6">
+                <a href="/admin" class="flex items-center space-x-1 text-sm hover:text-blue-600">
+                    <span class="text-amber-50">Login</span>
+                </a>
+                <div class="relative group">
+                   
+                    <ul class="absolute hidden group-hover:block bg-white border shadow-md right-0 mt-2 w-40 text-sm z-10">
+                        <li><a href="page-account.html" class="block px-4 py-2 hover:bg-gray-100">Posts</a></li>
+                        <li><a href="page-account.html" class="block px-4 py-2 hover:bg-gray-100">Categorias</a></li>
+                        <li><a href="page-login.html" class="block px-4 py-2 hover:bg-gray-100 text-red-600">Sign out</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </header>
-   
-    <!--End header-->
+
+    <!-- MAIN -->
     <main class="main">
-        <div class="page-header mt-30 mb-75">
-            <div class="container">
-                <div class="archive-header">
-                    <div class="row align-items-center">
-                        <div class="col-xl-3">
-                            <h1 class="mb-15">Blog & News</h1>
-                            <div class="breadcrumb">
-                                <a href="index.html" rel="nofollow"><i class="fi-rs-home mr-5"></i>Home</a>
-                                <span></span> Blog & News
-                            </div>
-                        </div>
-                        <div class="col-xl-9 text-end d-none d-xl-block">
-                          
-                        </div>
+        <div class="bg-[url('{% static 'assets/imgs/blog/hero-bg.jpg' %}')] bg-cover bg-center bg-no-repeat py-42">
+            <div class="bg-yellow-900/50 py-10">
+            <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <h1 class="text-3xl text-amber-50 font-semibold mb-2">Blog & News</h1>
+                    <div class="text-sm text-amber-50 space-x-2">
+                        <a href="/" class="hover:underline">Home</a>
+                        <span>/</span>
+                        <span>Blog & News</span>
                     </div>
                 </div>
-            </div>
+            </div></div>
         </div>
-        <div class="page-content mb-50">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9">
-                        <div class="shop-product-fillter mb-50 pr-30">
-                            <div class="totall-product">
-                                <h2>
-                                    <img class="w-36px mr-10" src="{% static 'assets/imgs/theme/icons/category-1.svg' %}" alt="" />
-                                    Kitchen Articles
-                                </h2>
-                            </div>
-                          \
-                        </div>
-                        <div class="loop-grid loop-list pr-30 mb-50">
-                            <article class="wow fadeIn animated hover-up mb-30 animated">
-                                <div class="post-thumb" style="background-image: url('{% static "imgs/blog/blog-1.png" %}')"></div>
-                                <div class="entry-content-2 pl-50">
-                                    <h3 class="post-title mb-20">
-                                        <a href="blog-post-right.html">9 Tasty Ideas That Will Inspire You to Grow a Home Herb Garden Today</a>
-                                    </h3>
-                                    <p class="post-exerpt mb-40">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                                    <div class="entry-meta meta-1 font-xs color-grey mt-10 pb-10">
-                                        <div>
-                                            <span class="post-on">25 April 2028</span>
-                                            <span class="hit-count has-dot">126k Views</span>
-                                        </div>
-                                        <a href="blog-post-right.html" class="text-brand font-heading font-weight-bold">Read more <i class="fi-rs-arrow-right"></i></a>
-                                    </div>
-                                </div>
-                            </article>
-                          
-                        </div>
-                        
-                    </div>
-                    <div class="col-lg-3 primary-sidebar sticky-sidebar">
-                        <div class="widget-area">
-                            <div class="sidebar-widget-2 widget_search mb-50">
-                                <div class="search-form">
-                                    <form action="#">
-                                        <input type="text" placeholder="Buscar..." />
-                                        <button type="submit"><i class="fi-rs-search"></i></button>
-                                    </form>
-                                </div>
-                            </div>
-                            <div class="sidebar-widget widget-category-2 mb-50">
-                                <h5 class="section-title style-1 mb-30">Categorias</h5>
-                                <ul>
-                                    <li>
-                                        <a href="shop-grid-right.html"> Milks & Dairies</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> Clothing</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> Pet Foods </a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> Baking material</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-grid-right.html"> Fresh Fruit</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+
+        <div class="container mx-auto px-4 py-10 flex flex-col lg:flex-row gap-8">
+            <!-- Blog Section -->
+            <div class="w-full lg:w-2/3 space-y-10">
+                <div>
+                    <h2 class="text-xl font-semibold mb-4 flex items-center gap-2">
+                        <img src="{% static 'assets/imgs/theme/logonobg.png' %}" alt="" class="w-6 h-6" />
+                        Proceso
+                    </h2>
                 </div>
+
+                {% for blog in blogs %}
+                <article class="bg-amber-100 text-amber-900 border rounded-lg p-6 shadow-sm hover:shadow-md transition">
+                    <h2 class="text-2xl font-bold mb-2">{{ blog.title }}</h2>
+                    <img src="/media/{{ blog.featured_image }}" alt="Imagen" class="w-full h-60 object-cover rounded mb-4">
+                    <p class="text-sm text-amber-950 mb-1">Categoría: {{ blog.category }}</p>
+                    <p class="mb-2 text-amber-950">{{ blog.short_description }}</p>
+                    <div class="prose text-amber-950 max-w-full">
+                        {{ blog.blog_body|linebreaks }}
+                    </div>
+                    <div class="text-sm text-gray-400 mt-4 flex justify-between">
+                        <span>Publicado: {{ blog.created_at }}</span>
+                        <span>Actualizado: {{ blog.updated_at }}</span>
+                    </div>
+                </article>
+                {% endfor %}
             </div>
+
+            <!-- Sidebar -->
+            <aside class="w-full lg:w-1/3 space-y-10">
+                <!-- Search -->
+                <div class="bg-amber-50 border rounded-lg p-4 shadow-sm">
+                    <form action="#" class="flex">
+                        <input type="text" placeholder="Buscar..." class="w-full px-4 py-2 border rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-400" />
+                        <button type="submit" class="bg-pink-400 text-white px-4 rounded-r-md">Buscar</button>
+                    </form>
+                </div>
+
+                <!-- Categories -->
+                <div class="bg-amber-50 border rounded-lg p-4 shadow-sm">
+                    <h5 class="text-lg font-semibold mb-4">Momentos</h5>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:underline">Inicio</a></li>
+                        <li><a href="#" class="hover:underline">Cocina</a></li>
+                        <li><a href="#" class="hover:underline">Empaquetado</a></li>
+                        <li><a href="#" class="hover:underline">Marketing</a></li>
+                        <li><a href="#" class="hover:underline">Presentacion</a></li>
+                    </ul>
+                </div>
+            </aside>
         </div>
     </main>
-    <footer class="main">
-       
-        
-      
-        <div class="container pb-30">
-            <div class="row align-items-center">
-                <div class="col-12 mb-30">
-                    <div class="footer-bottom"></div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6">
-                    <p class="font-sm mb-0">&copy; 2028, <strong class="text-brand">Nest</strong> - HTML Ecommerce Template <br />All rights reserved</p>
-                </div>
-                <div class="col-xl-4 col-lg-6 text-center d-none d-xl-block">
-                    <div class="hotline d-lg-inline-flex mr-30">
-                        <img src="{% static 'assets/imgs/theme/icons/phone-call.svg' %}" alt="hotline" />
-                        <p>1900 - 6666<span>Working 8:00 - 22:00</span></p>
-                    </div>
-                    <div class="hotline d-lg-inline-flex">
-                        <img src="{% static 'assets/imgs/theme/icons/phone-call.svg' %}" alt="hotline" />
-                        <p>1900 - 8888<span>24/7 Support Center</span></p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-6 text-end d-none d-md-block">
-                    <div class="mobile-social-icon">
-                        <h6>Follow Us</h6>
-                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-facebook-white.svg' %}" alt="" /></a>
-                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-twitter-white.svg' %}" alt="" /></a>
-                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-instagram-white.svg' %}" alt="" /></a>
-                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-pinterest-white.svg' %}" alt="" /></a>
-                        <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-youtube-white.svg' %}" alt="" /></a>
-                    </div>
-                    <p class="font-sm">Up to 15% discount on your first subscribe</p>
-                </div>
-            </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-amber-900 text-amber-50 py-12 mt-10">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 text-sm">
+        <!-- Columna 1 -->
+        <div>
+            <p class="mt-1">Iurrusgarai, Esposito y Cisneros.</p>
         </div>
-    </footer>
-    <!-- Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="text-center">
-                    <img src="{% static 'assets/imgs/theme/loading.gif' %}" alt="" />
-                </div>
+
+        <!-- Columna 3: Redes sociales -->
+        <div class="lg:text-right text-left">
+            <h6 class="text-white font-semibold mb-3">Siganos</h6>
+            <div class="flex lg:justify-end space-x-3 mb-3">
+                <a href="https://www.instagram.com/biteme-vcp/"><img src="{% static 'assets/imgs/theme/icons/icon-instagram-white.svg' %}" alt="Instagram" class="h-5 w-5"></a>
+                <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-pinterest-white.svg' %}" alt="Pinterest" class="h-5 w-5"></a>
+                <a href="#"><img src="{% static 'assets/imgs/theme/icons/icon-youtube-white.svg' %}" alt="YouTube" class="h-5 w-5"></a>
             </div>
         </div>
     </div>
-    <!-- Vendor JS-->
-    <script src="{% static  'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
-    <script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
-    <script src="{% static 'assets/js/vendor/jquery-migrate-3.3.0.min.js' %}"></script>
-    <script src="{% static 'assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/slick.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/jquery.syotimer.min.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/wow.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/perfect-scrollbar.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/magnific-popup.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/select2.min.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/waypoints.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/counterup.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/jquery.countdown.min.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/images-loaded.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/isotope.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/scrollup.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/jquery.vticker-min.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/jquery.theia.sticky.js' %}"></script>
-    <script src="{% static 'assets/js/plugins/jquery.elevatezoom.js' %}"></script>
-    <!-- Template  JS -->
-    <script src="{% static 'assets/js/main.js' %}"></script>
-    <script src="{% static 'assets/js/shop.js' %}"></script>
+</footer>
+
+<!-- Preloader Start -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="text-center">
+                <img src="{% static 'assets/imgs/theme/loading.gif' %}" alt="Loading..." />
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Vendor JS -->
+<script src="{% static 'assets/js/vendor/modernizr-3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/jquery-migrate-3.3.0.min.js' %}"></script>
+<script src="{% static 'assets/js/vendor/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Plugins -->
+
+
+<!-- Template JS -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+<script src="{% static 'assets/js/shop.js' %}"></script>
+
 </body>
 
 </html>

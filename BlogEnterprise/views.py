@@ -1,4 +1,9 @@
-from django.shortcuts import render # Necesario para renderizar templates
-
+from django.shortcuts import render
+from Blogs.models import Blog
+# Create your views here.
 def home(request):
-    return render(request, 'home.html') # Renderiza el template 'home.html'
+    blogs= Blog.objects.all()
+    contexto={
+        'blogs' : blogs
+    }
+    return render(request, 'home.html', contexto)   
