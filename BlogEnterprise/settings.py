@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-w3ifr299aqwo9vb9@b+#e&$+zorep%4gz(rb7bwv&l)eabvp^l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["blog-bitemee.onrender.com"]
+ALLOWED_HOSTS = ["biteme-blog.onrender.com"]
 
 
 # Application definition
